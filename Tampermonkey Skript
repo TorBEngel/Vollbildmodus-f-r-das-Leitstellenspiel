@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name         Vollbild-Schriftzug hinzufügen
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Fügt den Schriftzug "Vollbild" an einer bestimmten Stelle auf Leitstellenspiel.de hinzu.
+// @author       TorBEngel
+// @match        https://www.leitstellenspiel.de/*
+// @grant        none
+// ==/UserScript==
+(function() {
+    'use strict';
+
+    // Erzeuge ein neues Element für den Schriftzug
+    var vollbildLi = document.createElement('li');
+    vollbildLi.innerHTML = 'Vollbildmodus';
+    vollbildLi.style.cursor = 'pointer';
+    vollbildLi.style.lineHeight = '19px';
